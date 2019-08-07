@@ -125,16 +125,16 @@ def print_tracks(tracks):
 
 
 artists = {}
-artists['Flatbush Zombies'] = 'spotify:artist:1dqGS5sT6PE2wEvP1gROZC'
-artists['A$AP Mob'] = 'spotify:artist:7yO4IdJjCEPz7YgZMe25iS'
-artists['Schoolboy Q'] = 'spotify:artist:5IcR3N7QB1j6KBL8eImZ8m'
+#artists['Flatbush Zombies'] = 'spotify:artist:1dqGS5sT6PE2wEvP1gROZC'
+#artists['A$AP Mob'] = 'spotify:artist:7yO4IdJjCEPz7YgZMe25iS'
+#artists['Schoolboy Q'] = 'spotify:artist:5IcR3N7QB1j6KBL8eImZ8m'
 artists['Drake'] = 'spotify:artist:3TVXtAsR1Inumwj472S9r4'
 artists['Future'] = 'spotify:artist:1RyvyyTE3xzB2ZywiAwp0i'
 artists['Lil Wayne'] = 'spotify:artist:55Aa2cqylxrFIXC767Z865'
 artists['Lil Uzi Vert'] = 'spotify:artist:4O15NlyKLIASxsJ0PrXPfz'
 artists['Gucci Mane'] = 'spotify:artist:13y7CgLHjMVRMDqxdx0Xdo'
 artists['Rae Sremmurd'] = 'spotify:artist:7iZtZyCzp3LItcw1wtPI3D'
-#artists['Swae Lee'] = 'spotify:artist:1zNqQNIdeOUZHb8zbZRFMX'
+artists['Swae Lee'] = 'spotify:artist:1zNqQNIdeOUZHb8zbZRFMX'
 #artists['Slim Jxmmi'] = 'spotify:artist:7EEiVZvj6RCEtVX2F2pyxu'
 artists['Migos'] = 'spotify:artist:6oMuImdp5ZcFhWP0ESe6mG'
 #artists['Post Malone'] = 'spotify:artist:246dkjvS1zLTtiykXe5h60'
@@ -149,8 +149,8 @@ artists['Kendrick Lamar'] = 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'
 #artists['Steve Aoki'] = 'spotify:artist:77AiFEVeAVj2ORpC85QVJs'
 #artists['GASHI'] = 'spotify:artist:0JOxt5QOwq0czoJxvSc5hS'
 #artists['Ace Hood'] = 'spotify:artist:31HjiqargV4NAw4GZqUale'
-artists['Young Dolph'] = 'spotify:artist:3HiuzBlSW7pGDXlSFMhO2g'
-artists['Waka Flocka Flame'] = 'spotify:artist:6f4XkbvYlXMH0QgVRzW0sM'
+#artists['Young Dolph'] = 'spotify:artist:3HiuzBlSW7pGDXlSFMhO2g'
+#artists['Waka Flocka Flame'] = 'spotify:artist:6f4XkbvYlXMH0QgVRzW0sM'
 artists['Chief Keef'] = 'spotify:artist:15iVAtD3s3FsQR4w1v6M0P'
 artists['Ty Dolla $ign'] = 'spotify:artist:7c0XG5cIJTrrAgEC3ULPiq'
 #artists['Juicy J'] = 'spotify:artist:5gCRApTajqwbnHHPbr2Fpi'
@@ -160,11 +160,13 @@ artists['Wiz Khalifa'] = 'spotify:artist:137W8MRPWKqSmrBGDBFSop'
 #artists['NWA'] = 'spotify:artist:4EnEZVjo3w1cwcQYePccay'
 #artists['Jimi Hendrix'] = 'spotify:artist:776Uo845nYHJpNaStv1Ds4'
 #artists['R.E.M.'] = 'spotify:artist:4KWTAlx2RvbpseOGMEmROg'
+artists['Quavo'] = 'spotify:artist:0VRj0yCOv2FXJNP47XQnx5'
 
 
-tracks = sp_getters.get_artists_tracks(artists.values())
-tracks = filter_tracks(tracks, valence=(.9, 1))
+#tracks = sp_getters.get_artists_tracks(artists.values())
+#tracks = filter_tracks(tracks, valence=(.9, 1))
 #tracks = shuffle_tracks(tracks, max_artist_repeats=1)
+tracks = sp_getters.get_artists_shared_tracks(artists.values())
 print_tracks(tracks)
-sp_setters.set_new_playlist(tracks, name='Happy Rap?')
+sp_setters.set_new_playlist(tracks, name='Happy Rap')
 

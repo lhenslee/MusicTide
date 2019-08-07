@@ -1,0 +1,1 @@
+https://accounts.spotify.com/authorize?client_id=9110e5f232f24d7ab98119edb65bc0e5&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2F&scope=user-read-private%20user-read-email&state=34fFs29kd09
